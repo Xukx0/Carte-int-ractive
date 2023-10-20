@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma carte Interactive</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map" style="height: 400px;"></div>
+    <script>
+        var map = L.map('map').setView([45.884075, 4.594455], 9);
+        
+        var baseIcon = L.icon({
+            iconUrl: 'LOGOVERT.png',
+            iconSize: [32, 32],
+        });
+
+        var enlargedIcon = L.icon({
+            iconUrl: 'LOGOVERT.png',
+            iconSize: [48, 48], // Ajustez la taille agrandie selon vos besoins
+});
+    
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        var geojsonFeature = {
+    "type": "FeatureCollection",
+    "name": "Points11-2023",
+    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+    "features": [
+{ "type": "Feature", "properties": { "Remarque": "Cartographie des habitats - Inventaire toute faune", "Lat": "4.234131174449162", "Long": "45.498771284086835", "TEXTE TOTA": "Réalisation d'un Atlas de Biodiversité Communale à Saint-Just Saint-Rambert - OFB/SMAGL - 2021", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.234131174449162, 45.498771284086835 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.43260377862354", "Long": "46.27923642482557", "TEXTE TOTA": "Etat des lieux de la répartition de Coenagrion ornatum dans le Rhône - 2023 - DREAL (Projet PNA)", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.43260377862354, 46.279236424825569 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.331738839203419", "Long": "46.10884122638272", "TEXTE TOTA": "Etat des lieux de la répartition de Coenagrion ornatum dans le Rhône - 2023 - DREAL (Projet PNA)", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.331738839203419, 46.108841226382722 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.5874937299680685", "Long": "46.1945552375899", "TEXTE TOTA": "Inventaire entomologique des zones humides de l'ENS du Massif d'Avenas (Orthoptères, Rhopalocères, Odonates) - 2023 - Conseil départemental du Rhône", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.587493729968068, 46.194555237589903 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.497308495982222", "Long": "46.20890446248808", "TEXTE TOTA": "Premier inventaire naturaliste (Entomofaune (dont Hétérocères), Chiroptères, Avifaune, Micromammifères) - 2024 - France Nature Environnement National", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.497308495982222, 46.208904462488078 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.65287123134118", "Long": "46.19304356711203", "TEXTE TOTA": "Premier inventaire naturalistes (Entomofaune, Avifaune, Reptiles, Amphibiens) d'une parcelle nouvellement acquise pas le département du Rhône - 2022 et 2023 - Conseil départemental du Rhône", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.65287123134118, 46.193043567112028 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.759456119385001", "Long": "46.10458167916644", "TEXTE TOTA": "Inventaire entomologique du plan d'eau du Motio (Orthoptères, Rhopalocères, Odonates) - 2022 et 2023 - Conseil départemental du Rhône", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.759456119385001, 46.104581679166436 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.44743724233543", "Long": "46.027908474044224", "TEXTE TOTA": "Premier inventaire des zones humides de l'ENS Grand Mont - 2023 - Conseil départemental du Rhône", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.44743724233543, 46.027908474044224 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.726601077378722", "Long": "45.93936927016473", "TEXTE TOTA": "Inventaire de cours d'eau (entomofaune, avifaune, amphibiens) - 2023 - Syndicat Mixte du Bassin Versant de l'Azergues (SMBVA)", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.726601077378722, 45.939369270164732 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.7290714306678545", "Long": "45.96472320402139", "TEXTE TOTA": "Suivi de la population du cuivré des marais (Lycaena dispar) - 2023 - Conseil départemental du Rhône", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.729071430667855, 45.964723204021389 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.730994022115993", "Long": "45.96174856644834", "TEXTE TOTA": "Premier inventaire hétérocères de la carrière de Bourdelan - 2023 - SOREAL", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.730994022115993, 45.961748566448343 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Inventaire naturaliste sur l'année et rédaction de préconisation de gestion", "Lat": "4.580315232304896", "Long": "45.70892287566466", "TEXTE TOTA": "Etat des lieux de la diversité entomologique de zones humides (Orthoptères, Rhopalocères, Odonates) - 2023 - Syndicat d'Aménagement et de Gestion de l'Yzeron, du Ratier et du Charbonnières", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.580315232304896, 45.708922875664662 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Cartographie des habitats et réalisation d'inventaires entomologique", "Lat": "4.537777105717615", "Long": "45.72869754176029", "TEXTE TOTA": "Participation à l'Atlas de la Biodiversité Communale de Courzieu - 2022 - Commune de Courzieu", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.537777105717615, 45.72869754176029 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Inventaire des Rhopalocères", "Lat": "4.5919793569498495", "Long": "45.63647070116124", "TEXTE TOTA": "Etats des lieux des Rhopalocères de l'ENS du Signal Saint-André - 2022 - Conseil départemental du Rhône", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.591979356949849, 45.636470701161237 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Inventaire des adultes et des larves de triton et préconisation de gestion", "Lat": "4.794721891762578", "Long": "45.77082004758605", "TEXTE TOTA": "Suivi des populations de tritons palmé et alpestre de la cressonnière de vaise - 2022 et 2023 - Ville de Lyon", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.794721891762578, 45.770820047586049 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Inventaire Odonates et préconisation de gestion", "Lat": "4.7939813580929425", "Long": "45.77030350065086", "TEXTE TOTA": "Suivi de la cressonnière de vaise (Odonates) - 2022 - Ville de Lyon", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.793981358092942, 45.770303500650861 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Inventaire diurnes et nocturnes des Orthoptères", "Lat": "4.795684585533104", "Long": "45.770200190689756", "TEXTE TOTA": "Suivi de la cressonnière de vaise (Orthoptères) - 2023 - Ville de Lyon", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.795684585533104, 45.770200190689756 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Suivi pluriannuel et inventaire entomologique", "Lat": "4.779689058268975", "Long": "45.7281888424313", "TEXTE TOTA": "Suivi entomologique post-aménagement d'un cours d'eau (Odonates, Coléoptères saproxyliques patrimoniales) - 2022 et 2023 - Syndicat d'Aménagement et de Gestion de l'Yzeron, du Ratier et du Charbonnières", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.779689058268975, 45.728188842431301 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Inventaire Odonates", "Lat": "4.815827101347196", "Long": "45.742454542775654", "TEXTE TOTA": "Suivi des Odonates des bassins artificiels de la Confluence - 2022 - Ville de Lyon", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.815827101347196, 45.742454542775654 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": "Recherche de la plante hôte, des pontes et des imagos", "Lat": "4.86463335644663", "Long": "45.61751024964891", "TEXTE TOTA": "Recherche de Phengaris sp de milieux humides dans le département du Rhône - 2023 - DREAL (projet PNA Rhopalocères)", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.86463335644663, 45.617510249648909 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.92864657948138", "Long": "45.71590298119589", "TEXTE TOTA": "Inventaire entomologique des bassins de la Porte des Alpes (Orthoptères, Rhopalocères, Odonates) - 2022 et 2023 - Métropole de Lyon", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.92864657948138, 45.715902981195889 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.92791028820715", "Long": "45.79871473568429", "TEXTE TOTA": "Suivi des populations de Bacchante (Lopinga achine) de parcelles compensatoires et recherche de nouveaux sites favorables (via la recherche de la plante hôte) - 2022 et 2024 - EDF, SEGAPAL", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.92791028820715, 45.798714735684293 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.733521357972782", "Long": "45.96530713882294", "TEXTE TOTA": "Premier inventaire accoustique des Chiroptères de la carrière de Bourdelan - 2024 - SOREAL", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.733521357972782, 45.965307138822944 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.724959382989462", "Long": "45.937516414625236", "TEXTE TOTA": "Premier inventaire accoustique des Chiroptères de cours d'eau - 2024 - Syndicat Mixte du Bassin Versant de l'Azergues (SMBVA)", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.724959382989462, 45.937516414625236 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.815754357298098", "Long": "45.742617482993346", "TEXTE TOTA": "Animation grand public sur la découverte des libellules - 2022 et 2023 - Ville de Lyon", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.815754357298098, 45.742617482993346 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.8557604747930405", "Long": "45.790649225100346", "TEXTE TOTA": "Inventaire entomologique (Orthoptères, Rhopalocères) de toiture végétalisées - 2022 - Veolia", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.855760474793041, 45.790649225100346 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.930880526013536", "Long": "45.717283550417726", "TEXTE TOTA": "Formation des gestionnaires sur la mise en place de bonnes pratiques (Comment allier Biodiversité et accueil du public) - 2022 et 2023 - Métropole de Lyon", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.930880526013536, 45.717283550417726 ] ] } },
+{ "type": "Feature", "properties": { "Remarque": null, "Lat": "4.7203352519796935", "Long": "45.95374792822642", "TEXTE TOTA": "Inventaire avifaune de parcelles compensatoires - 2023 - Soberco environnement", "CP": null, "Ville": null }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 4.720335251979694, 45.95374792822642 ] ] } }
+]
+};
+
+L.geoJSON(geojsonFeature, {
+    pointToLayer: function (feature, latlng) {
+        var marker = L.marker(latlng, {
+            icon: baseIcon
+        });
+    
+    marker.on('mouseover', function () {
+        marker.setIcon(enlargedIcon);
+});
+
+    marker.on('mouseout', function () {
+        marker.setIcon(baseIcon);
+});
+
+    marker.bindPopup(feature.properties['TEXTE TOTA']);
+
+    return marker;
+}
+        }).addTo(map);
+        var generalPopup = L.popup()
+    .setLatLng([45.884075, 4.594455]) // Coordonnées de la popup (celles de votre carte)
+    .setContent("N'hésitez pas à cliquer sur les icônes pour plus d'informations")
+    .openOn(map);
+    </script>
+</body>
+</html>
